@@ -1,0 +1,96 @@
+/* Minimal, clean styles for the portfolio */
+:root {
+  --bg: #0b0f1a;
+  --bg-2: #12192b;
+  --text: #e6e9ef;
+  --muted: #a8b0bf;
+  --primary: #4f8cff;
+  --primary-700: #3a6ed6;
+  --card: #0f1424;
+  --border: #22304a;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 80% -10%, #1b2a4a 0%, var(--bg) 45%),
+              radial-gradient(800px 600px at -20% 110%, #16335a 0%, var(--bg-2) 55%);
+}
+
+.container {
+  max-width: 960px;
+  padding: 32px 20px 80px;
+  margin: 0 auto;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 28px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.name {
+  margin: 0 0 6px;
+  font-weight: 800;
+  font-size: clamp(32px, 6vw, 54px);
+  letter-spacing: -0.02em;
+}
+
+.role {
+  margin: 0 0 14px;
+  font-weight: 600;
+  font-size: clamp(18px, 2.5vw, 22px);
+  color: var(--muted);
+}
+
+.bio {
+  margin: 0 0 22px;
+  max-width: 60ch;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 120ms ease, background 120ms ease;
+}
+.btn:hover { transform: translateY(-1px); background: var(--primary-700); }
+.btn-secondary { background: transparent; color: var(--text); }
+.btn-secondary:hover { background: rgba(255,255,255,0.06); }
+
+.projects { margin-top: 28px; }
+.projects h2, .contact h2 { font-size: 20px; color: var(--muted); font-weight: 700; }
+.project-list { list-style: none; padding: 0; margin: 12px 0 0; }
+.project { padding: 10px 0; border-bottom: 1px dashed var(--border); }
+.project:last-child { border-bottom: none; }
+
+.contact { margin-top: 28px; }
+.footer {
+  max-width: 960px;
+  margin: 18px auto 32px;
+  padding: 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .card { padding: 44px 40px; }
+}

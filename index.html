@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muhammad Akmal — Software Developer</title>
+  <meta name="description" content="Portfolio of Muhammad Akmal, Software Developer." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1 class="name">Muhammad Akmal</h1>
+      <p class="role">Software Developer</p>
+      <p class="bio">I build modern, reliable software — web apps, APIs, and tools.</p>
+      <div class="actions">
+        <a class="btn" href="#projects" aria-label="See projects">See Projects</a>
+        <a class="btn btn-secondary" href="#contact" aria-label="Get in touch">Get in Touch</a>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Selected Work</h2>
+      <ul class="project-list">
+        <li class="project">Lightweight REST API — Express/Node</li>
+        <li class="project">Responsive Portfolio — HTML/CSS/JS</li>
+        <li class="project">Data ETL pipeline — Python</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Open to collaboration and freelance opportunities.</p>
+      <p>Prefer email or LinkedIn.</p>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Muhammad Akmal</footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
